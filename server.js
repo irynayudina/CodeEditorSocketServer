@@ -21,10 +21,8 @@ let users = [];
 
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  // options
   cors: {
-    origin: "*",
-    methods: ["GET", "POST"],
+    origin: "http://localhost:3000",
   },
 });
 
