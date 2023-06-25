@@ -14,10 +14,10 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: "*",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   },
-})
+});
 
 const defaultValue = ""
 
