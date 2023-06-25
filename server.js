@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "codeeditorsocketserver-production.up.railway.app",
     methods: ["GET", "POST"],
   },
 });
