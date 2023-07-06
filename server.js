@@ -1,8 +1,8 @@
 import { createServer } from "http";
 import { Server } from "socket.io";
-const mongoose = require("mongoose");
-const Document = require("./Document");
-const dotenv = require("dotenv");
+import mongoose from "mongoose";
+import Document from "./Document.js";
+import dotenv from "dotenv";
 dotenv.config();
 
 mongoose

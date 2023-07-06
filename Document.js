@@ -1,29 +1,10 @@
-const { Schema, model, ObjectId } = require("mongoose");
+import mongoose from "mongoose";
 
-const Document = new Schema({
+const documentSchema = mongoose.Schema({
   _id: String,
   data: Object,
-  // projectName: {
-  //   type: String,
-  //   required: true,
-  // },
-  // projectId: {
-  //   type: String,
-  //   required: true,
-  //   unique: true,
-  // },
-  // associatedUsers: [
-  //   {
-  //     type: ObjectId,
-  //     ref: "User",
-  //   },
-  // ],
-  // connectedUsers: [
-  //   {
-  //     type: ObjectId,
-  //     ref: "User",
-  //   },
-  // ],
 });
 
-module.exports = model("Document", Document)
+const Document = mongoose.model('Document', documentSchema);
+
+export default Document;
