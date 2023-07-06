@@ -65,7 +65,7 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(3000);
+httpServer.listen(process.env.PORT || "8080");
 
 async function findOrCreateDocument(id) {
   if (id == null) return;
